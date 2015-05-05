@@ -1,4 +1,4 @@
-# optobject-before-after-comparison
+# Before/After Comparison - Optional Object for WebSite X5
 Source code of the "Before/After Comparison" optional object for WebSite X5.
 
 ### Copyright Notice
