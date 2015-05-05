@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebsiteX5LanguagesLibrary xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<Languages>
+		<Language>
+			<Code><![CDATA[DE]]></Code>
+			<Name><![CDATA[German]]></Name>
+			<WritingDirection><![CDATA[LeftToRight]]></WritingDirection>
+			<Localizations>
+				<Localization>
+					<Key>description</Key>
+					<Value><![CDATA[Wählen Sie die Bilder, die Sie vergleichen möchten.]]></Value>
+				</Localization>
+				<Localization>
+					<Key>general-description</Key>
+					<Value><![CDATA[Zeigt den vergleich zwischen zwei Bilder.]]></Value>
+				</Localization>
+				<Localization>
+					<Key>img1</Key>
+					<Value><![CDATA[Bild 1:]]></Value>
+				</Localization>
+				<Localization>
+					<Key>img2</Key>
+					<Value><![CDATA[Bild 2:]]></Value>
+				</Localization>
+				<Localization>
+					<Key>style</Key>
+					<Value><![CDATA[Stil:]]></Value>
+				</Localization>
+				<Localization>
+					<Key>style-fade</Key>
+					<Value><![CDATA[Einblenden]]></Value>
+				</Localization>
+				<Localization>
+					<Key>style-hover</Key>
+					<Value><![CDATA[Bei Mauskontakt]]></Value>
+				</Localization>
+				<Localization>
+					<Key>style-slide</Key>
+					<Value><![CDATA[Slide]]></Value>
+				</Localization>
+			</Localizations>
+		</Language>
+		<Language>
+			<Code><![CDATA[EN]]></Code>
+			<Name><![CDATA[English]]></Name>
+			<WritingDirection><![CDATA[LeftToRight]]></WritingDirection>
+			<Localizations>
+				<Localization>
+					<Key>description</Key>
+					<Value><![CDATA[Choose the images you want to compare.]]></Value>
+				</Localization>
+				<Localization>
+					<Key>general-description</Key>
+					<Value><![CDATA[Show the comparison between two images.]]></Value>
+				</Localization>
+				<Localization>
+					<Key>img1</Key>
+					<Value><![CDATA[Image 1:]]></Value>
+				</Localization>
+				<Localization>
+					<Key>img2</Key>
+					<Value><![CDATA[Image 2:]]></Value>
+				</Localization>
+				<Localization>
+					<Key>style</Key>
+					<Value><![CDATA[Style:]]></Value>
+				</Localization>
+				<Localization>
+					<Key>style-fade</Key>
+					<Value><![CDATA[Fade]]></Value>
+				</Localization>
+				<Localization>
+					<Key>style-hover</Key>
+					<Value><![CDATA[On mouse over]]></Value>
+				</Localization>
+				<Localization>
+					<Key>style-slide</Key>
+					<Value><![CDATA[Slide]]></Value>
+				</Localization>
+			</Localizations>
+		</Language>
+		<Language>
+			<Code><![CDATA[FR]]></Code>
+			<Name><![CDATA[French]]></Name>
+			<WritingDirection><![CDATA[LeftToRight]]></WritingDirection>
+			<Localizations>
+				<Localization>
+					<Key>description</Key>
+					<Value><![CDATA[Choisissez les images que vous souhaitez comparer.]]></Value>
+				</Localization>
+				<Localization>
+					<Key>img1</Key>
+					<Value><![CDATA[Image 1 :]]></Value>
+				</Localization>
+				<Localization>
+					<Key>img2</Key>
+					<Value><![CDATA[Image 2 :]]></Value>
+				</Localization>
+				<Localization>
+					<Key>style</Key>
+					<Value><![CDATA[Style :]]></Value>
+				</Localization>
+				<Localization>
+					<Key>style-fade</Key>
+					<Value><![CDATA[Fondu]]></Value>
+				</Localization>
+				<Localization>
+					<Key>style-hover</Key>
+					<Value><![CDATA[Effet au passage de la souris]]></Value>
+				</Localization>
+				<Localization>
+					<Key>style-slide</Key>
+					<Value><![CDATA[Slide]]></Value>
+				</Localization>
+			</Localizations>
+		</Language>
+		<Language>
+			<Code><![CDATA[IT]]></Code>
+			<Name><![CDATA[Italian]]></Name>
+			<WritingDirection><![CDATA[LeftToRight]]></WritingDirection>
+			<Localizations>
+				<Localization>
+					<Key>description</Key>
+					<Value><![CDATA[Seleziona le due immagini che vuoi confrontare.]]></Value>
+				</Localization>
+				<Localization>
+					<Key>general-description</Key>
+					<Value><![CDATA[Mostra la comparazione di due immagini.]]></Value>
+				</Localization>
+				<Localization>
+					<Key>img1</Key>
+					<Value><![CDATA[Immagine 1:]]></Value>
+				</Localization>
+				<Localization>
+					<Key>img2</Key>
+					<Value><![CDATA[Immagine 2:]]></Value>
+				</Localization>
+				<Localization>
+					<Key>style</Key>
+					<Value><![CDATA[Stile:]]></Value>
+				</Localization>
+				<Localization>
+					<Key>style-fade</Key>
+					<Value><![CDATA[Dissolvenza]]></Value>
+				</Localization>
+				<Localization>
+					<Key>style-hover</Key>
+					<Value><![CDATA[Su passaggio]]></Value>
+				</Localization>
+				<Localization>
+					<Key>style-slide</Key>
+					<Value><![CDATA[Slide]]></Value>
+				</Localization>
+			</Localizations>
+		</Language>
+	</Languages>
+</WebsiteX5LanguagesLibrary>

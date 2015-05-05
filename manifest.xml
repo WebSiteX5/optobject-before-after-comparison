@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<App uuid="3888b6ab-24e5-4ee1-b17e-28dffc59317">
+   <Name>Before/After Comparison</Name>
+   <Author>Incomedia</Author>
+   <Version>6</Version>
+   <Category>Galleries</Category>
+   <Description l10n-id="general-description">Show the comparison between two images.</Description>
+   <ShowPreview>True</ShowPreview>
+   <Resources>
+      <Resource src="beforeafter.js" action="copy" autolink="true" shared="true" />
+      <Resource src="beforeafter.css" action="process" autolink="true" shared="false" />
+   </Resources>
+   <Parameters>
+      <Tab>
+         <Label>Graphics</Label>
+         <Description l10n-id="description">Choose the images you want to compare</Description>
+         <ShowPreview>True</ShowPreview>
+         <Fields>
+            <Field id="img1" type="file">
+               <Label l10n-id="img1">Image before:</Label>
+               <UpdatesPreview>true</UpdatesPreview>
+               <Extensions>jpg,png,gif</Extensions>
+            </Field>
+            <Field id="img2" type="file">
+               <Label l10n-id="img2">Image after:</Label>
+               <UpdatesPreview>true</UpdatesPreview>
+               <Extensions>jpg,png,gif</Extensions>
+            </Field>
+            <Field id="style" type="dropdown">
+               <Label l10n-id="style">Style:</Label>
+               <UpdatesPreview>true</UpdatesPreview>
+               <Options>
+                  <Option value="hover" l10n-id="style-hover">Hover</Option>
+                  <Option value="slide" l10n-id="style-slide">Slide</Option>
+                  <Option value="fade" l10n-id="style-fade">Fade in</Option>
+               </Options>
+            </Field>
+         </Fields>
+      </Tab>
+   </Parameters>
+   <Hooks><![CDATA[
+      function OnBeforeImageElaboration(fieldId, image) {
+         // Resize the image if necessary
+         if (image.sourceWidth > currentObject.width) {
+            image.outputHeight = currentObject.width / image.sourceWidth * image.sourceHeight;
+            image.outputWidth = currentObject.width;
+         }
+      }
+      function GetHeight() {
+         if ( wsx5.mode == "uipreview" ) {
+            if ( parameters.style.value == "fade" ) {
+               return 300;
+            }
+            return 250;
+         }
+         var height = 0;
+         if ( parameters.img1.isImage && height < parameters.img1.height ) {
+            height = parameters.img1.height;
+         }
+         if ( parameters.img2.isImage && height < parameters.img2.height ) {
+            height = parameters.img2.height;
+         }
+         if ( parameters.style.value == "fade" ) {
+            height += 50;
+         }
+         return height;
+      }
+      function IsEmpty() {
+         return !parameters.img1.path.length || !parameters.img2.path.length;
+      }
+   ]]></Hooks>
+   <Output><![CDATA[
+      <?wsx5
+         // Calculate the size of the images to match the preview window
+         var style = "",
+            version = wsx5.version.substring(0, wsx5.version.indexOf(".")) * 1;
+            build = wsx5.version.substring(wsx5.version.lastIndexOf(".") + 1) * 1;
+         if (parameters.img1.isImage && parameters.img2.isImage) {
+            var w, h;
+            // While in UI preview, this way of settings the sizes can be used only if the build is 11.0.1.13 or higher
+            if (version > 11 || build >= 13 || wsx5.mode != "uipreview") {
+               var cw = wsx5.mode == "uipreview" ? 350 : currentObject.width;
+               w = parameters.img1.width,
+               h = parameters.img1.height;
+
+               if (w > cw) {
+                  h = cw / parameters.img1.width * parameters.img1.height;
+                  w = cw;
+               }
+               if (wsx5.mode == "uipreview" && h > 250) {
+                  w = 250 / parameters.img1.height * parameters.img1.width;
+                  h = 250;
+               }
+            }
+            if (w && h) {
+               style = "width: " + w + "px; height: " + h + "px;";
+            }
+         }
+      ?>
+      <div class="container beforeAfter-<?wsx5 document.write(parameters.style.value) ?>" style="margin: 0 auto; <?wsx5 document.write(style); ?>">
+         <img class="img1" src="<?wsx5 document.write(parameters.img1.path); ?>" style="<?wsx5 document.write(style); ?>">
+         <div class="img2" style="background-image: url('<?wsx5 document.write(parameters.img2.path); ?>'); <?wsx5 document.write(style); ?>"></div>
+         <div class="border"></div>
+         <?wsx5 if (parameters.style.value == "slide" || parameters.style.value == "fade") document.write( "<div class=\"handle\"></div>" ); ?>
+      </div>
+   ]]></Output>
+</App>
